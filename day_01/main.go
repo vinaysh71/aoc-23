@@ -77,7 +77,7 @@ func readFromFile(filename string) ([]int, []int, error) {
 		value := scanner.Text()
 		first, last, first_2, last_2, err := getNumbersFromString(value)
 		if err != nil {
-			log.Fatal(err)
+			return nil, nil, err
 		}
 		result_p1 = append(result_p1, first*10+last)
 		result_p2 = append(result_p2, first_2*10+last_2)
